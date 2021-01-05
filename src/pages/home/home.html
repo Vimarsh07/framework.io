@@ -1,0 +1,251 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Basic Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+<ion-row padding>
+
+<ion-col class="first"> <h4>Grassroots</h4>
+  <ion-list>
+
+    <ion-item>
+    <ion-label>
+      <ion-icon name="folder"style="position:absolute;left:0px;"></ion-icon> Dashboard
+       </ion-label>
+    </ion-item>
+
+    <p padding>Fundraiser</p>
+   
+    <ion-item>
+    <ion-label>
+      <ion-icon name="folder"style="position:absolute;left:0px;"></ion-icon>Recurring
+      <ion-icon name="add-circle"style="position:absolute;right:0px;"></ion-icon>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+     
+    <ion-label>
+      <ion-icon name ="water" style="position:absolute;left:0px;"></ion-icon>One Time
+      <ion-icon name="add-circle"style="position:absolute;right:0px;"></ion-icon>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+    <ion-label>Donations
+      <ion-icon name="add-circle"style="position:absolute;right:0px;" ></ion-icon>
+    </ion-label>
+    </ion-item>
+
+    <p padding> Activities</p>
+
+    <ion-item>
+    <ion-label>
+      <ion-icon name="folder"style="position:absolute;left:0px;"></ion-icon>Upcoming
+      <ion-icon name="add-circle"style="position:absolute;right:0px;"></ion-icon>
+    </ion-label>
+    </ion-item>
+
+    <ion-item>
+    <ion-label>
+      <ion-icon name ="water" style="position:absolute;left:0px;"></ion-icon>Past</ion-label>
+    </ion-item>
+  
+
+   <p padding> Profile</p>
+
+   <ion-item>
+   <ion-label>
+    Projects
+    <ion-icon name="add-circle"style="position:absolute;right:0px;"></ion-icon>
+   </ion-label>
+   </ion-item>
+
+  <ion-item>
+  <ion-label>Team
+    <ion-icon name="add-circle"style="position:absolute;right:0px;"></ion-icon>
+  </ion-label>
+  </ion-item>
+
+  <ion-item>
+  <ion-label>
+    <ion-icon name="card"style="position:absolute;left:0px;"></ion-icon>Legal
+    <ion-icon name="add-circle"style="position:absolute;right:0px;"></ion-icon>
+  </ion-label>
+  </ion-item>
+
+  <ion-item>
+  <ion-label>
+    <ion-icon name="card"style="position:absolute;left:0px;"></ion-icon>Press
+    <ion-icon name="add-circle"style="position:absolute;right:0px;"></ion-icon>
+  </ion-label>
+  </ion-item>
+
+  <ion-item>
+  <ion-label>
+    <ion-icon name="card"style="position:absolute;left:0px;"></ion-icon>Photos</ion-label>
+  </ion-item>
+
+  <p padding> Impact</p>
+
+   <ion-item>
+   <ion-label>
+    <ion-icon name="copy"style="position:absolute;left:0px;"></ion-icon>Impact</ion-label>
+   </ion-item>
+
+  <ion-item>
+  <ion-label>
+    <ion-icon name="today"style="position:absolute;left:0px;"></ion-icon>Review</ion-label>
+  </ion-item>
+
+  <p padding> Settings</p>
+
+   <ion-item>
+   <ion-label>Coordinators</ion-label>
+   </ion-item>
+
+  <ion-item>
+  <ion-label>
+    <ion-icon name="file-tray"style="position:absolute;left:0px;"></ion-icon>Billing</ion-label>
+  </ion-item>
+
+</ion-list>
+</ion-col>
+
+
+  
+<ion-col  padding class="second"> <h4>Basic Profile</h4>
+  Be sure to present the best version of [your NGO]
+  <ion-item >
+    <ion-label >Name</ion-label>
+    </ion-item>
+    <ion-input ion-textarea type="text" [(ngModel)]="name" ></ion-input>
+          
+    <ion-item >
+    <ion-label>Vision</ion-label>
+    </ion-item>
+    <ion-input type="text" [(ngModel)]="vision" ></ion-input>
+         
+    <ion-item >
+    <ion-label >Mission</ion-label>
+    </ion-item>
+     <ion-input type="text" [(ngModel)]="mission"  ></ion-input>
+           
+    <ion-item >
+    <ion-label >Description</ion-label>
+    </ion-item>
+    <ion-input type="text" [(ngModel)]="description" ></ion-input>
+           
+    <ion-item >
+    <ion-label >Address</ion-label>
+    </ion-item>
+     <ion-input type="text" [(ngModel)]="address"  ></ion-input>
+
+     
+    </ion-col>
+
+<ion-col padding>
+  <br>
+  <br>
+  <br>
+  
+  <ion-item >
+    <ion-label>Logo</ion-label>
+    </ion-item>
+    <ion-input  ></ion-input>
+
+    
+  <ion-item >
+    <ion-label>Video URL</ion-label>
+    </ion-item>
+    <ion-input type="url" [(ngModel)]="video" ></ion-input>
+
+    <ion-item >
+      <ion-label>Causes</ion-label>
+      </ion-item>
+      <ion-input type="text" [(ngModel)]="causes" ></ion-input>
+
+      <ion-item >
+        <ion-label>Activities</ion-label>
+        </ion-item>
+        <ion-input type="text" [(ngModel)]="activities" ></ion-input>
+
+        <ion-item >
+          <ion-label>Why volunteer here?</ion-label>
+          </ion-item>
+          <ion-input type="text" [(ngModel)]="volunteer" ></ion-input>
+
+          <ion-item >
+            <ion-label>Why Your Help Matters?</ion-label>
+            </ion-item>
+            <ion-input type="text" [(ngModel)]="matters" ></ion-input>
+            <button 
+            ion-button color="dark" round outline class="Add" (click)="add(name,vision,mission,description,address,phone,phone2,
+            facebook,twitter,instagram,email,website,youtube,linkedin,video,causes,activities,volunteer,matters)" >Save and Publish
+            
+            </button>   
+            <button ion-button color="dark" round outline class="Add">Save </button> 
+</ion-col>
+
+
+<ion-col padding><h4>Reach Out</h4>
+  All you contact details
+
+  <ion-item >
+  <ion-label>Phone 1*</ion-label>
+  </ion-item>
+  <ion-input type="number" [(ngModel)]="phone" ></ion-input>
+          
+  <ion-item >
+  <ion-label>Phone 2</ion-label>
+  </ion-item>
+  <ion-input type="number" [(ngModel)]="phone2" ></ion-input>
+         
+  <ion-item >
+  <ion-label >Facebook</ion-label>
+  </ion-item>
+  <ion-input type="text" [(ngModel)]="facebook"  ></ion-input>
+           
+  <ion-item >
+  <ion-label >Twitter</ion-label>
+  </ion-item>
+   <ion-input type="text" [(ngModel)]="twitter" ></ion-input>
+           
+    <ion-item >
+    <ion-label >Instagram</ion-label>
+    </ion-item>
+    <ion-input type="text" [(ngModel)]="instagram"  ></ion-input>
+
+    <ion-item >
+    <ion-label >Email*</ion-label>
+    </ion-item>
+    <ion-input type="email" [(ngModel)]="email"  ></ion-input>
+
+    <ion-item >
+    <ion-label >Website</ion-label>
+    </ion-item>
+    <ion-input type="url" [(ngModel)]="website"  ></ion-input>
+
+    <ion-item >
+    <ion-label >Youtube</ion-label>
+    </ion-item>
+    <ion-input type="text" [(ngModel)]="youtube"  ></ion-input>
+
+    <ion-item >
+    <ion-label >LinkedIn</ion-label>
+    </ion-item>
+    <ion-input type="text" [(ngModel)]="linkedin"  ></ion-input>
+
+   
+</ion-col>
+</ion-row>
+       
+
+</ion-grid>
+</ion-content>
